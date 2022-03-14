@@ -1,7 +1,6 @@
-# etch-a-sketch
-# Calculator
+# Etch-a-sketch
 
-Project to create Calculator using only HTML, CSS and Vanilla JS.
+Project to create an Etch-a-Skethc game using only HTML, CSS and Vanilla JS.
 
 From The Odin Project's [curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project).
 
@@ -20,7 +19,6 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/paths/founda
 * Visual Studio Code
 * Linux terminal
 * Git and GitHub
-* ESLint + Airbnb JavaScript Style Guide
 
 
 
@@ -37,7 +35,6 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/paths/founda
 ### What I learned
 
 * Better knowledge of **Javascript**.
-* Learned to add **keyboard support**.
 * A lot of minor things.
 
 ## Author
