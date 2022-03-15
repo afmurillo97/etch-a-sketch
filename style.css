@@ -2,13 +2,13 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    background-color: crimson;
+    background-color: #181C25;
 }
 .title{
     display: flex;
     justify-content: center;
     font-size: 50px;
-    color: #2196F3;
+    color: #FF1744;
     margin-block-start: auto;
 }
 .container{
@@ -20,15 +20,16 @@ body{
 .buttons{
     display: grid;
     grid-template-rows: auto auto auto auto;
-    background-color: #f3cd21;
+    background-color: #FF1744;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 10px;
     
 }
 .button{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #74767C;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 40px;
+    
 }
 .button0 {
 
@@ -40,16 +41,51 @@ body{
  
 }
 .button3 {
-
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    background-color: #2196F3;
+    grid-template-rows: auto auto auto auto;
+    background-color: #FF1744;
     padding: 10px;
 }
   .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: auto;
     text-align: center;

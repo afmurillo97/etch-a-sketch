@@ -16,3 +16,21 @@ for (let i = 0; i < 4; i++) {
     button.classList.add('button'+i);
     buttons.appendChild(button)
 }
+
+// input range slider
+const button3 = document.querySelector('.button.button3');
+
+const sliderText = document.createElement('div');
+sliderText.textContent = 'Pencil Size: ';
+sliderText.classList.add();
+sliderText.classList.add();
+const slider = document.createElement('input');
+slider.classList.add('slider');
+slider.setAttribute('type', 'range');
+slider.setAttribute('min', '1');
+slider.setAttribute('max', '64');
+slider.setAttribute('value', '32');
+
+button3.appendChild(sliderText);
+button3.appendChild(slider);
+
