@@ -1,4 +1,5 @@
 body{
+    font-family: 'Hubballi', cursive;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -28,10 +29,10 @@ body{
 .button{
     background-color: #74767C;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 40px;
+    padding: 20px;
     
 }
-.button0 {
+/* .button0 {
 
 }
 .button1 {
@@ -39,54 +40,118 @@ body{
 }
 .button2 {
  
-}
+} */
 .button3 {
     display:flex;
     align-items:center;
     justify-content:center;
+    flex-direction: column;
+    
 }
-.slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 100%; /* Full-width */
-    height: 25px; /* Specified height */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
+.pencil {
+    font-size: 20px;
+    font-weight: bold;
 }
-/* Mouse-over effects */
-.slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
+input[type=range] {
+    height: 17px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    background-color: #74767C;
   }
-  
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+  input[type=range]:focus {
+    outline: none;
   }
-  
-  .slider::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #DB143A;
+    background: #181C25;
+    border-radius: 21px;
+    border: 1px solid #FF1744;
   }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 3px 3px 3px #FF1744;
+    border: 2px solid #BF1133;
+    height: 36px;
+    width: 36px;
+    border-radius: 35px;
+    background: #181C25;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -16px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #181C25;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #DB143A;
+    background: #74767C;
+    border-radius: 21px;
+    border: 1px solid #FF1744;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 3px 3px 3px #FF1744;
+    border: 2px solid #BF1133;
+    height: 36px;
+    width: 36px;
+    border-radius: 35px;
+    background: #74767C;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #74767C;
+    border: 1px solid #FF1744;
+    border-radius: 42px;
+    box-shadow: 1px 1px 1px #DB143A;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #74767C;
+    border: 1px solid #FF1744;
+    border-radius: 42px;
+    box-shadow: 1px 1px 1px #DB143A;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 3px 3px 3px #FF1744;
+    border: 2px solid #BF1133;
+    height: 36px;
+    width: 36px;
+    border-radius: 35px;
+    background: #74767C;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #74767C;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #74767C;
+  }
+
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
+    
     background-color: #FF1744;
     padding: 10px;
 }
   .grid-item {
+    display: flex;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: auto;
     text-align: center;
 }
+
+/* grid-template-columns: ; */
