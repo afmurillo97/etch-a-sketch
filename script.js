@@ -54,6 +54,7 @@ function createGrid(size) {
         gridItem.addEventListener('mousedown', function(){ 
             currentColor = inputColor.value;
             gridItem.style.background = currentColor;
+            gridItem.style.cursor = 'pointer';
             isDrawing = true;
         });
         // while the user clicks, the background keep changing
@@ -61,11 +62,13 @@ function createGrid(size) {
             if (isDrawing === true){
                 currentColor = inputColor.value;
                 gridItem.style.background = currentColor;
+                gridItem.style.cursor = 'alias';
             }
         });
         // if the user stop, the background color doesn't change
         gridItem.addEventListener('mouseup', function(){
                 isDrawing = false; 
+                gridItem.style.cursor = 'pointer';
         });
     }
 }
@@ -100,7 +103,7 @@ span.textContent = 'Pencil Color';
 const inputColor = document.createElement('input');
 inputColor.classList.add('color-picker');
 inputColor.setAttribute('type', 'color');
-inputColor.setAttribute('value', 'currentColor');
+inputColor.setAttribute('value', '#fff');
 
 button2.appendChild(span);
 button2.appendChild(inputColor);

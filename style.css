@@ -33,7 +33,6 @@ body{
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 4px;
-    cursor: pointer;
 }
 /* .button0 {
 
@@ -42,13 +41,15 @@ body{
 
 } */
 .button2 {
-  display: inline-block;
+  display: flex;
   background-color: #74767C;
   text-align: center;
   font-size: 20px;
   transition: all 0.5s;
   font-weight: bold;
-  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .button2 span {
@@ -89,12 +90,22 @@ body{
 
 
 .color-picker{
-	width: 100%;
-	background-color: #74767C;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
 }
-.color-picker:hover{
-	width: 100%;
-	background-color: #DB143A;
+.color-picker::-webkit-color-swatch {
+  border-radius: 50%;
+  border: 7px solid #FF1744;
+}
+.color-picker::-moz-color-swatch {
+  border-radius: 50%;
+  border: 7px solid #181C25;
 }
 
 
@@ -112,6 +123,7 @@ input[type=range] {
     margin: 10px 0;
     width: 100%;
     background-color: #74767C;
+    cursor: pointer;
   }
   input[type=range]:focus {
     outline: none;
@@ -212,7 +224,7 @@ input[type=range] {
 .grid-item:hover {
   animation: pulse 1s infinite;
   background-position: 100%;
-  /* background-color: currentColor; */
+  cursor: pointer;
 }
 @keyframes pulse {
   0% {
