@@ -1,4 +1,5 @@
 body{
+    /* Google fonts */
     font-family: 'Hubballi', cursive;
     margin-left: auto;
     margin-right: auto;
@@ -24,30 +25,83 @@ body{
     background-color: #FF1744;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 10px;
-    
+    gap: 10px;
+    border-radius: 4px;
 }
 .button{
     background-color: #74767C;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
-    
+    border-radius: 4px;
+    cursor: pointer;
 }
 /* .button0 {
 
 }
 .button1 {
 
-}
-.button2 {
- 
 } */
+.button2 {
+  display: inline-block;
+  background-color: #74767C;
+  text-align: center;
+  font-size: 20px;
+  transition: all 0.5s;
+  font-weight: bold;
+  
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 .button3 {
     display:flex;
     align-items:center;
     justify-content:center;
     flex-direction: column;
-    
 }
+
+
+
+
+
+
+
+.color-picker{
+	width: 100%;
+	background-color: #74767C;
+}
+.color-picker:hover{
+	width: 100%;
+	background-color: #DB143A;
+}
+
+
+
+
+
+
 .pencil {
     font-size: 20px;
     font-weight: bold;
@@ -143,15 +197,31 @@ input[type=range] {
 
 .grid-container {
     display: grid;
-    
     background-color: #FF1744;
     padding: 10px;
+    border: 1px solid #181C25;
+    border-radius: 4px;
+    cursor: pointer;
 }
-  .grid-item {
+.grid-item {
     display: flex;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.8);
     text-align: center;
 }
 
-/* grid-template-columns: ; */
+.grid-item:hover {
+  animation: pulse 1s infinite;
+  background-position: 100%;
+  /* background-color: currentColor; */
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+    100% {
+    transform: scale(1);
+  }
+}
