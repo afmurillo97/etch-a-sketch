@@ -33,7 +33,8 @@ const gridContainer = document.querySelector('.grid-container');
 // let currentColor = inputColor.value;
 function createGrid(size) {
     let result = [];
-    
+    let randomStatus = 0;
+
     // with the size, I make an array full of 'auto'
     for (let i = 0; i < size ; i++){
         result.push('auto');
@@ -42,26 +43,24 @@ function createGrid(size) {
     let textColumns = result.join(' ');
     // add my css property for auto-resize the order of the columns
     gridContainer.style.gridTemplateColumns =  textColumns;
-
     let isDrawing = false;
-    let currentColor = 0;
+
     for (let i = 0; i < size * size; i++) {
         // create every 'div' and put them inside of "grid-container"
         const gridItem = document.createElement('div');
         gridItem.classList.add('grid-item');
         gridContainer.appendChild(gridItem);
+
         // when the user clicks, the background in current div changes
         gridItem.addEventListener('mousedown', function(){ 
-            currentColor = inputColor.value;
-            gridItem.style.background = currentColor;
-            gridItem.style.cursor = 'pointer';
+            gridItem.style.background = colorPicked();
+            gridItem.style.cursor = 'alias';
             isDrawing = true;
         });
         // while the user clicks, the background keep changing
         gridItem.addEventListener('mousemove', function(){
             if (isDrawing === true){
-                currentColor = inputColor.value;
-                gridItem.style.background = currentColor;
+                gridItem.style.background = colorPicked();
                 gridItem.style.cursor = 'alias';
             }
         });
@@ -70,15 +69,17 @@ function createGrid(size) {
                 isDrawing = false; 
                 gridItem.style.cursor = 'pointer';
         });
-    }
-}
+    };
+};
+// return the choose color
 
- function deleteGrid() {
+
+
+function deleteGrid() {
     while (gridContainer.hasChildNodes()) {
         gridContainer.removeChild(gridContainer.firstChild);  
     }
  }
-
 
 createGrid(10);
 // updates the value of slider when this moves
@@ -94,17 +95,49 @@ slider.oninput = function() {
 // button 2 with an 'span' inside
 const button2 = document.querySelector('.button.button2');
 
-const button2Text = document.createElement('button');
-button2Text.classList.add('button2');
-
 const span = document.createElement('span');
 span.textContent = 'Pencil Color';
 
 const inputColor = document.createElement('input');
 inputColor.classList.add('color-picker');
 inputColor.setAttribute('type', 'color');
-inputColor.setAttribute('value', '#fff');
+inputColor.setAttribute('value', '#181C25');
 
 button2.appendChild(span);
 button2.appendChild(inputColor);
 
+// button1 = to button2 without the color picker
+
+const button1 = document.querySelector('.button.button1');
+
+const spanRandom = document.createElement('span');
+spanRandom.textContent = 'Random Color';
+
+const buttonRandom = document.createElement('button');
+buttonRandom.classList.add('button-random');
+buttonRandom.setAttribute('id', 'buttonRandom');
+
+button1.appendChild(spanRandom);
+button1.appendChild(buttonRandom);
+
+
+function colorPicked() {
+    if (count === 1){
+        let n = (Math.random() * 0xfffff * 1000000).toString(16);
+        let colorRandom = '#' + n.slice(0, 6) ;
+        return colorRandom;
+    } else if (count === 0) {
+        let color = inputColor.value;
+        return color;
+    }
+}
+let count = 0;
+buttonRandom.addEventListener('click', () => {
+    count = 1;
+    // alert("button was clicked " + count);
+});
+
+inputColor.addEventListener('click', () => {
+    count = 0;
+    // alert("button was clicked " + count);
+});
