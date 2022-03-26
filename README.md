@@ -4,7 +4,7 @@ Project to create an Etch-a-Skethc game using only HTML, CSS and Vanilla JS.
 
 From The Odin Project's [curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project).
 
-🔗 **Live preview:** [here](https://afmurillo97.github.io/etch-a-sketch/)
+🔗 **Live preview:** [Etch a Sketch](https://afmurillo97.github.io/etch-a-sketch/)
 
 ## Built with
 
